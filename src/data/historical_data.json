@@ -1,0 +1,250 @@
+[
+{
+    "type": "HDB 2 Rooms",
+    "data": [
+        {
+            "date": "12-03-2001",
+            "block": "4A",
+            "area": "625 sqft",
+            "price": "$300,000"
+
+
+        },
+        {
+            "date": "12-05-2007",
+            "block": "3C",
+            "area": "625 sqft",
+            "price": "$350,000"
+    
+        },
+        {
+            "date": "30-03-2011",
+            "block": "4B",
+            "area": "625 sqft",
+            "price": "$400,000"
+    
+        },
+        {
+            "date": "14-11-2011",
+            "block": "5B",
+            "area": "625 sqft",
+            "price": "$410,000"
+    
+        },
+        {
+            "date": "11-03-2017",
+            "block": "5B",
+            "area": "625 sqft",
+            "price": "$420,000"
+
+        },
+        {
+            "date": "12-07-2020",
+            "block": "6A",
+            "area": "625 sqft",
+            "price": "$470,000"
+
+        }
+        
+
+    ]
+},
+
+{
+    "type": "HDB 3 Rooms",
+    "data": [
+        {
+            "date": "12-03-2001",
+            "block": "2A",
+            "area": "725 sqft",
+            "price": "$370,000"
+
+        },
+        {
+            "date": "12-05-2007",
+            "block": "3C",
+            "area": "745 sqft",
+            "price": "$450,000"
+    
+        },
+        {
+            "date": "07-01-2011",
+            "block": "4B",
+            "area": "755 sqft",
+            "price": "$440,000"
+    
+        },
+        {
+            "date": "14-01-2011",
+            "block": "5B",
+            "area": "765 sqft",
+            "price": "$510,000"
+    
+        },
+        {
+            "date": "11-05-2017",
+            "block": "5B",
+            "area": "775 sqft",
+            "price": "$620,000"
+
+        },
+        {
+            "date": "12-07-2021",
+            "block": "6A",
+            "area": "715 sqft",
+            "price": "$470,000"
+
+        }
+        
+    ]
+},
+
+
+{
+    "type": "HDB 4 Rooms",
+    "data": [
+        {
+            "date": "12-03-2001",
+            "block": "1A",
+            "area": "825 sqft",
+            "price": "$570,000"
+
+        },
+        {
+            "date": "12-05-2007",
+            "block": "5C",
+            "area": "845 sqft",
+            "price": "$550,000"
+    
+        },
+        {
+            "date": "07-01-2011",
+            "block": "4E",
+            "area": "855 sqft",
+            "price": "$540,000"
+    
+        },
+        {
+            "date": "14-01-2011",
+            "block": "2B",
+            "area": "865 sqft",
+            "price": "$610,000"
+    
+        },
+        {
+            "date": "11-05-2017",
+            "block": "5F",
+            "area": "875 sqft",
+            "price": "$690,000"
+
+        },
+        {
+            "date": "12-07-2021",
+            "block": "1A",
+            "area": "815 sqft",
+            "price": "$670,000"
+
+        }
+        
+    ]
+},
+
+{
+    "type": "HDB 5 Rooms",
+    "data": [
+        {
+            "date": "12-04-2005",
+            "block": "1E",
+            "area": "1125 sqft",
+            "price": "$890,000"
+
+        },
+        {
+            "date": "12-10-2007",
+            "block": "5C",
+            "area": "1125 sqft",
+            "price": "$900,000"
+    
+        },
+        {
+            "date": "07-02-2009",
+            "block": "4B",
+            "area": "1125 sqft",
+            "price": "$940,000"
+    
+        },
+        {
+            "date": "14-01-2010",
+            "block": "2C",
+            "area": "1165 sqft",
+            "price": "$910,000"
+    
+        },
+        {
+            "date": "11-05-2014",
+            "block": "5D",
+            "area": "1175 sqft",
+            "price": "$990,000"
+
+        },
+        {
+            "date": "12-02-2021",
+            "block": "2A",
+            "area": "1215 sqft",
+            "price": "$970,000"
+
+        }
+        
+    ]
+},
+{
+    "type": "HDB Executive",
+    "data": [
+        {
+            "date": "14-04-2009",
+            "block": "1D",
+            "area": "1325 sqft",
+            "price": "$890,000"
+
+        },
+        {
+            "date": "19-10-2010",
+            "block": "3C",
+            "area": "1325 sqft",
+            "price": "$900,000"
+    
+        },
+        {
+            "date": "27-02-2011",
+            "block": "1B",
+            "area": "1425 sqft",
+            "price": "$940,000"
+    
+        },
+        {
+            "date": "19-01-2015",
+            "block": "1C",
+            "area": "1465 sqft",
+            "price": "$910,000"
+    
+        },
+        {
+            "date": "12-05-2018",
+            "block": "7D",
+            "area": "1575 sqft",
+            "price": "$1,090,000"
+
+        },
+        {
+            "date": "12-03-2021",
+            "block": "9A",
+            "area": "1415 sqft",
+            "price": "$970,000"
+
+        }
+        
+    ]
+}
+
+
+]
