@@ -16,7 +16,7 @@ function PropertyDetails({item,location,details,mrt}) {
        <Row>
            <Col md={6}>
            <div style={{
-          maxHeight: "500px",
+          maxHeight: "400px",
           backgroundColor: "lightyellow",
           overflow: "scroll",
           border: "1px solid black"
