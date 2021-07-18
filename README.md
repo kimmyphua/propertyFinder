@@ -1,3 +1,27 @@
+<h2> REACT Property Finder </h2>
+https://react--propertyfinder.herokuapp.com
+(may not load well on mobile interface)
+<img src="https://i.imgur.com/NTgHPa4.png" /> 
+<h3>Click to view property information, nearby amenities and historical transaction </h3>
+<img src="https://i.imgur.com/QEeEYDw.png" /> 
+
+<h3> Search property base on address </h3>
+<img src="https://i.imgur.com/zlnS9kX.png" /> 
+
+<h3> Search nearby amenities on google map </h3>
+<img src="https://i.imgur.com/cecxPDV.png" /> 
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
