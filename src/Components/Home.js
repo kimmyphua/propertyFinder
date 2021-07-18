@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
         margin: theme.spacing(1),
-        width: '29ch',
+        width: '28ch',
         backgroundColor: 'white'
       },
     },
@@ -42,8 +42,6 @@ function Home() {
     }
 
 
-    // console.log(list)
-
     return ( 
     <Container fluid>
         <Row className="justify-content-center my-1">
@@ -66,7 +64,7 @@ function Home() {
             onChange = {(e) => {setKeyword(e.target.value)}
             }/>
         </form>
-        <Button className="my-2 bg-white border-1 border-dark text-dark mx-2 button-class" onClick = {getList} > Submit </Button>
+        <Button className="my-2 bg-white border-1 border-dark text-dark button-class" onClick = {getList} > Submit </Button>
 
         </Navbar>
         
