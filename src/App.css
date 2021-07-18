@@ -1,3 +1,33 @@
+.container-body {
+  background-color: white;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+.typography-text {
+  
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+
+}
+
+.typography-text:hover {
+  background-color: #d5f4e6;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transform: scale(1.1);
+  
+}
+
+
+.button-class:hover {
+  box-shadow: 8px 7px 10px rgba(0,0,0,.4);
+  transform: scale(1.1);
+}
+
+
+
+
 .App {
   text-align: center;
 }

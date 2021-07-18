@@ -1,16 +1,26 @@
-import axios from 'axios'
-import React, {useState,useEffect} from 'react'
-import {Button} from 'react-bootstrap'
+
+import React, {useState} from 'react'
+import {Button, Col, Row} from 'react-bootstrap'
 import {GoogleMap, Marker} from "react-google-maps";
 import * as historical_data from '../data/historical_data.json'
+import NewPoint from './NewPoint';
 
 
-function PropertyDetails({location,details,mrt}) {
-  
+function PropertyDetails({item,location,details,mrt}) {
+    const [place, setPlace]= useState(item.address)
+
+
 
     return (
         <div>
-       
+       <Row>
+           <Col md={6}>
+           <div style={{
+          maxHeight: "500px",
+          backgroundColor: "lightyellow",
+          overflow: "scroll",
+          border: "1px solid black"
+        }}>
             <p className="border border-dark p-1 m-1">
                 Nearest MRT stations: 
             <span> {mrt[0]?.name}, </span> 
@@ -35,16 +45,30 @@ function PropertyDetails({location,details,mrt}) {
 
             {details?.map((item,i) => (
                 <p key={i} className="text-start">
-            <h5><img style={{width:"1.3em"}} src ={item?.icon}/> 
-            {item?.name} 
-            
-            {item.photos ? <span className="fw-light "><a href={item.photos[0]?.html_attributions[0].split('"')[1]} target="_blank"> Map </a></span> : ""} </h5>              
+            <h5> <NewPoint 
+            item={item}
+            setPlace={setPlace}/> </h5>              
 
-            <h6 className="text-success">
-            {item?.vicinity} </h6>
             </p>
             ))}
-           
+            </div>
+           </Col>
+           <Col md={6}>
+           <iframe
+                style={{
+                    width:"100%",
+                    height:"100%"
+                }}
+                loading="lazy"
+                allowfullscreen
+                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_KEY}&q=${place}`} />
+            
+            </Col>
+            </Row>
+
+
+
+
     <GoogleMap>
 
 

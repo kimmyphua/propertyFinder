@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 import PropertyDetails from './PropertyDetails';
 import HistoricalData from './HistoricalData';
 import axios from 'axios';
-
+import {Col, Row} from 'react-bootstrap'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -47,8 +47,10 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
-    maxWidth: 500,
+    backgroundColor: "#d5f4e6",
+    width: '100%',
+    overflow: 'scroll',
+    border: '1px solid rgba(0, 0, 0, 0.6)',
   },
 }));
 
@@ -61,10 +63,9 @@ export default function Menu({results,item}) {
     async function getDetails(){
         setDetails([])
         await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?countrycode=sg&address=${item.address}
-        &key=AIzaSyAKPMPbh_3SfeWejrnsrnbNaOdfEZboS4I`).then(res => {
+        &key=${process.env.REACT_APP_GOOGLE_KEY}`).then(res => {
                 setLocation(res.data.results)
-            // console.log(res.data.results[0]?.geometry.location.lat)
-            // console.log(res.data.results[0]?.geometry.location.lng)
+            
              axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${res.data.results[0]?.geometry.location.lat},${res.data.results[0]?.geometry.location.lng}
              &rankby=distance&type=store&key=${process.env.REACT_APP_GOOGLE_KEY}`).then(res1 => {
               setDetails(res1.data.results)
@@ -80,7 +81,7 @@ export default function Menu({results,item}) {
         
         })
         setVisible(!visible)
-        console.log(details)
+      
     }
 
 
@@ -109,9 +110,12 @@ export default function Menu({results,item}) {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label="Historical Transaction" {...a11yProps(0)} />
-          <Tab label="Nearby Amenities" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Overview" {...a11yProps(0)} 
+          style={{backgroundColor: "#eca1a6"}}/>
+          <Tab label="Nearby Amenities" {...a11yProps(1)} 
+          style={{backgroundColor: "#bdcebe"}}/>
+          <Tab label="Historical Transaction" {...a11yProps(2)} 
+          style={{backgroundColor: "#d6cbd3"}}/>
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -120,28 +124,45 @@ export default function Menu({results,item}) {
         onChangeIndex={handleChangeIndex}
       >
 
-        
+
         <TabPanel value={value} index={0} dir={theme.direction}>
-        <HistoricalData results={results}/>
+        <Row>
+          <Col md={4}>
+          
+              <h3 className="text-danger mx-1"> {item?.rooms} in {item?.address}</h3>
+              
+              <h4> {item.price} </h4>
+              <h6 className="my-3 text-muted"> {item.price_psf}</h6>
+             
+              <h5 className="my-3"> Size: {item.sqf_list} </h5>
+              <h6>{item?.bedrooms} Beds {item?.bathrooms} Baths</h6>
+  
+             
+              </Col>
+              <Col md={8}>
+              <iframe
+                style={{width:"100%",
+                height:"100%"}}
+                loading="lazy"
+                allowfullscreen
+                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.REACT_APP_GOOGLE_KEY}&q=${item.address}`} />
+            </Col>
+            </Row>
         </TabPanel>
 
 
 
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <div style={{
-          maxHeight: "500px",
-          backgroundColor: "lightyellow",
-          overflow: "scroll"
-        }}>
+     
         <PropertyDetails
         item={item} details={details} mrt={mrt} location={location} />
-        </div>
+        
         </TabPanel>
 
 
 
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+        <HistoricalData results={results}/>
         </TabPanel>
       </SwipeableViews>
     </div>
